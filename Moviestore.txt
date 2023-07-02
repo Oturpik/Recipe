@@ -1,0 +1,95 @@
+To create the Movie-Record System on a Linux operating system and utilize Git and GitHub for version control, follow these instructions:
+
+Step 1: Create the Movie-Record System Directory Structure
+1. Open a terminal on your Linux system.
+2. Navigate to the desired location where you want to create the Movie-Record System directory.
+   For example, if you want to create it in your home directory, use the command:
+   
+   cd ~
+   
+3. Create the Movie-Record System directory and its sub-directories using the following commands:
+   ```
+   mkdir Movie-Record-System
+   cd Movie-Record-System
+   mkdir movies
+   mkdir series
+   ```
+
+Step 2: Create and Organize Movie Files
+1. Navigate into the "movies" directory:
+   ```
+   cd movies
+   ```
+2. Create sub-directories for movies. Replace "moviex" and "moviey" with actual movie names:
+   ```
+   mkdir moviex
+   mkdir moviey
+   ```
+3. Move into the "moviex" directory:
+   ```
+   cd moviex
+   ```
+4. Create movie_x1.txt and movie_x2.txt files (replace with actual movie filenames):
+   ```
+   touch movie_x1.txt
+   touch movie_x2.txt
+   ```
+   Repeat this step for other movie directories and files.
+5. Move back to the "movies" directory:
+   ```
+   cd ..
+   ```
+
+Step 3: Create and Organize Series Files
+1. Navigate into the "series" directory:
+   ```
+   cd series
+   ```
+2. Create sub-directories for series. Replace "seriesa" and "seriesb" with actual series names:
+   ```
+   mkdir seriesa
+   mkdir seriesb
+   ```
+3. Move into the "seriesa" directory:
+   ```
+   cd seriesa
+   ```
+4. Create series_a1.txt and series_a2.txt files (replace with actual series filenames):
+   ```
+   touch series_a1.txt
+   touch series_a2.txt
+   ```
+   Repeat this step for other series directories and files.
+5. Move back to the "series" directory:
+   ```
+   cd ..
+   ```
+
+Step 4: Initialize Git Repository and Connect to GitHub
+1. Make sure you have Git installed on your Linux system. If not, install Git using the package manager for your distribution.
+2. Go to GitHub (https://github.com) and create a new repository called "Movie-Record-System".
+3. Initialize Git repository inside the "Movie-Record-System" directory:
+   ```
+   git init
+   ```
+4. Add the files to the Git repository:
+   ```
+   git add .
+   ```
+5. Commit the changes:
+   ```
+   git commit -m "Initial commit"
+   ```
+6. Connect the local Git repository to the GitHub repository:
+   ```
+   git remote add origin <repository-url>
+   ```
+   Replace `<repository-url>` with the URL of your GitHub repository.
+
+Step 5: Push Changes to GitHub
+1. Push the local Git repository to GitHub:
+   ```
+   git push -u origin master
+   ```
+
+Now you have successfully created the Movie-Record System directory structure, organized movie and series files, and set up version control using Git and GitHub. You can continue making changes to the files and use Git commands like `git add`, `git commit`, and `git push` to track and manage your changes.

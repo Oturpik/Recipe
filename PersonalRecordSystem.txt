@@ -1,0 +1,63 @@
+Step 1: Create a Dedicated User Account
+1. Open a terminal on your Linux system or on WSL ubuntu application which I used.
+2. Run the following command to create a new user account named "recorduser":
+   ```
+   sudo useradd recorduser
+   ```
+
+Step 2: Set a Strong Password for the User Account
+1. Set a password for the "recorduser" account using the following command:
+   ```
+   sudo passwd recorduser
+   ```
+   You will be prompted to enter and confirm the password.
+
+Step 3: Create the File Structure
+1. Log in as the "recorduser" by switching to the new user account:
+   ```
+   sudo su - recorduser
+   ```
+2. Use your preferred text editor (e.g., Nano or Gedit) to create the file structure. For example, using Nano:
+   ```
+   nano Personal_Record_System.txt
+   ```
+
+   Enter the following file structure in the text editor:
+   ```
+   Personal_Record_System/
+   ├── credentials/
+   │ ├── usernames.txt
+   │ ├── passwords.txt
+   │ └── email_addresses.txt
+   ├── notes/
+   │ ├── personal_notes.txt
+   │ └── important_dates.txt
+   └── backups/
+   ├── backup_2023-06-13.zip
+   └── backup_2023-06-20.zip
+   ```
+   Save the file.
+
+Step 4: Set Restrictive Permissions
+1. Set restrictive permissions on the personal record files using the "chmod" command:
+   ```
+   chmod 600 Personal_Record_System/credentials/usernames.txt
+   chmod 600 Personal_Record_System/credentials/passwords.txt
+   chmod 600 Personal_Record_System/credentials/email_addresses.txt
+   chmod 600 Personal_Record_System/notes/personal_notes.txt
+   chmod 600 Personal_Record_System/notes/important_dates.txt
+   ```
+
+Step 5: Create Backups for All Files
+1. Navigate to the "backups" directory:
+   ```
+   cd Personal_Record_System/backups
+   ```
+2. Create backup files. Replace the filenames with actual backup filenames:
+   ```
+   touch backup_2023-06-13.zip
+   touch backup_2023-06-20.zip
+   ```
+   You can use tools like `zip` or `tar` to create actual backups of your files.
+
+Now you have created a dedicated user account for the Personal Record Management System, set a strong password, created the file structure, set restrictive permissions, and created backups for your files. Remember to regularly update and backup your files to ensure data integrity and security.
